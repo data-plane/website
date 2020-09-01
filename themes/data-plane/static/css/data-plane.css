@@ -1,0 +1,15 @@
+h1, h2, h3, h4{
+  font-weight:bold
+}
+a{
+  color:purple
+}
+nav .active a{
+  font-weight: bold;
+}
+nav .sub-menu a{
+  font-weight: normal;
+}
+nav .sub-menu .active a{
+  font-weight: bold;
+}

@@ -1,0 +1,54 @@
+{{ define "main" }}
+
+  <section class="border-b">
+    <div class="container mx-auto">
+      <h1 class="text-xl mt-10 mb-10">{{ .Title }}</h1>
+      <div class="hero-text flex">
+        <div>
+          <h2>Build your cloud.</h2>
+          Build and secure your data plane on top of your cloud-based infrastructure using the best practices such as automation, IaC, DevOps, CI/CD, holistic monitoring, and DevSecOps, among others.
+        </div>
+        <div>
+          <h2>Build your Control Plane.</h2>
+          To manage and operate end-to-end your data plane and the delivery of your cloud native applications.
+        </div>
+        <div>
+          <h2>Cloud-based agnostic technology.</h2>
+          Free open source tooling, i.e. no vendor-lock-in. Security along the SDLC. Extremely Agile. Automation anywhere and everywhere approach.
+        </div>
+      </div>
+      <div class="uppercase w-full text-center">
+        <a href="/contact/">Talk to Us</a>
+      </div>
+  </div>
+  </section>
+
+  <div class="container mx-auto flex flex-row">
+    <section class="flex-1">
+        <h2>From Our Blog</h2>
+        <ul class="flex flew-row">
+          {{/* paginate all posts in the archive section of the content */}}
+          {{ range where .Paginator.Pages.ByDate.Reverse "Section" "blog" | first 3 }}
+            <li class="border m-1 p-1">
+                <p><a href="{{ .Permalink }}">{{ .Title }}</a></p> {{/* display the post title */}}
+                <p>{{ .Date }}</p>  {{/* display the post date */}}
+            </li>
+          {{ end }}
+        </ul>
+    </section>
+
+    <section class="">
+      <h2>Next Webinars</h2>
+      <ul>
+        {{/* paginate all posts in the archive section of the content */}}
+        {{ range where .Paginator.Pages.ByDate.Reverse "Section" "webinar-events" | first 3 }}
+          <li>
+            <p><a href="{{ .Permalink }}">{{ .Title }}</a></p> {{/* display the post title */}}
+            <p>{{ .Date }}</p>  {{/* display the post date */}}
+          </li>
+        {{ end }}
+      </ul>    
+    </section>
+
+  </div>
+{{ end }}

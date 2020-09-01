@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    {{- partial "head.html" . -}}
+    <body class="flex flex-col min-h-screen {{if .IsHome}}home{{else}}{{.Type}}{{end}} {{ .File.BaseFileName }} ">
+        {{- partial "header.html" . -}}
+        <section id="content" class="flex-1">
+            {{- partial "breadcrumbs.html" . -}}
+            {{- block "main" . }}{{- end }}
+        </section>
+        {{- partial "footer.html" . -}}
+    </body>
+</html>
