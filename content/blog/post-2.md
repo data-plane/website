@@ -2,8 +2,7 @@
 title: "Post 2"
 date: 2020-08-31T13:24:28+02:00
 draft: false
-tags: ["markdown", "GitHub", "website"]
-categories: ["hugo", "base16"]
+tags: ["GitHub", "Web Design"]
 author: "Miguel Uza"
 ---
 

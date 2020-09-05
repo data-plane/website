@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+  <div class="container mx-auto">
+    {{ partial "tag-cloud.html" .}}
+    <h1>{{ .Title }}</h1>
+    <ul>
+    {{ range .Pages.ByPublishDate.Reverse }}
+        <li>
+          <h2><a class="" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          <div>{{ partial "date-tags.html" . }}</div>
+        </li>
+    {{ end }}
+    </ul>
+  </div>
+
+{{ end }}

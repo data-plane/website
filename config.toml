@@ -41,3 +41,7 @@ theme = "data-plane"
     url = "/webinar-events/"
     parent = "resources"
     weight = 2
+[params]
+  dateFormat = "Jan 2, 2006"
+[taxonomies]
+  tag = "tags"
