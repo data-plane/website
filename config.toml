@@ -2,6 +2,7 @@ baseURL = "https://data-plane.io/"
 languageCode = "es"
 title = "Data Plane"
 theme = "data-plane"
+paginate = "2"
 [menu]
   [[menu.main]]
     identifier = "home"

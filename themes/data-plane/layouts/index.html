@@ -31,7 +31,11 @@
           {{ range where .Paginator.Pages.ByDate.Reverse "Section" "blog" | first 3 }}
             <li class="border m-1 p-1">
                 <p><a href="{{ .Permalink }}">{{ .Title }}</a></p> {{/* display the post title */}}
-                <p>{{ .Date }}</p>  {{/* display the post date */}}
+                {{ $dateTime := .PublishDate.Format "2006-01-02" }}
+                {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+                <small>{{ .PublishDate.Format $dateFormat }}</small>  {{/* display the post date */}}
+                <p>{{ .Summary }}
+                </p>
             </li>
           {{ end }}
         </ul>

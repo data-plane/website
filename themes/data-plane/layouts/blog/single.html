@@ -3,6 +3,7 @@
   <div class="container mx-auto">
     {{ partial "tag-cloud.html" .}}
     <h1>{{ .Title }}</h1>
+    <small>Author: {{ .Params.author }}</small>
     <div>{{ partial "date-tags.html" . }}</div>
     <div>{{ .Content }}</div>
   </div>
