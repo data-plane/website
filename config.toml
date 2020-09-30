@@ -3,6 +3,8 @@ languageCode = "es"
 title = "Data Plane"
 theme = "data-plane"
 paginate = "2"
+publishDir = "docs"
+
 [menu]
   [[menu.main]]
     identifier = "home"

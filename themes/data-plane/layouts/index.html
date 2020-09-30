@@ -1,58 +1,60 @@
 {{ define "main" }}
-
-  <section class="border-b">
+  <video class="video-bg" src="/images/dataplane.mp4" autoplay="true" loop="true" muted="true"></video>
+  <section class="hero flex flex-col justify-end">
     <div class="container mx-auto">
-      <h1 class="text-xl mt-10 mb-10">{{ .Title }}</h1>
+      <h1 class="hero-title mt-10 mb-16 font-normal"><span>Enterprise cloud data plane.</span>Any environment. Any service.</h1>
       <div class="hero-text flex">
-        <div>
-          <h2>Build your cloud.</h2>
-          Build and secure your data plane on top of your cloud-based infrastructure using the best practices such as automation, IaC, DevOps, CI/CD, holistic monitoring, and DevSecOps, among others.
+        <div class="hero-card w-1/3 m-2 ml-0 p-3">
+          <h2 class="font-normal text-xl">Build your cloud.</h2>
+          <p class="text-sm">Build and secure your data plane on top of your cloud-based infrastructure using the best practices such as automation, IaC, DevOps, CI/CD, holistic monitoring, and DevSecOps, among others.</p>
         </div>
-        <div>
-          <h2>Build your Control Plane.</h2>
-          To manage and operate end-to-end your data plane and the delivery of your cloud native applications.
+        <div class="hero-card w-1/3 m-2 p-3">
+          <h2 class="font-normal text-xl">Build your Control Plane.</h2>
+          <p class="text-sm">To manage and operate end-to-end your data plane and the delivery of your cloud native applications.</p>
         </div>
-        <div>
-          <h2>Cloud-based agnostic technology.</h2>
-          Free open source tooling, i.e. no vendor-lock-in. Security along the SDLC. Extremely Agile. Automation anywhere and everywhere approach.
+        <div class="hero-card w-1/3 m-2 mr-0 p-3">
+          <h2 class="font-normal text-xl">Cloud-based agnostic technology.</h2>
+          <p class="text-sm">Free open source tooling, i.e. no vendor-lock-in. Security along the SDLC. Extremely Agile. Automation anywhere and everywhere approach.</p>
         </div>
       </div>
-      <div class="uppercase w-full text-center">
-        <a href="/contact/">Talk to Us</a>
+      <div class="hero-link uppercase w-full text-center mb-5 mt-2 font-bold">
+        <a class="block py-2 px-8 rounded-full" href="/contact/">Talk to Us</a>
       </div>
   </div>
   </section>
 
-  <div class="container mx-auto flex flex-row">
-    <section class="flex-1">
-        <h2>From Our Blog</h2>
-        <ul class="flex flew-row">
-          {{/* paginate all posts in the archive section of the content */}}
-          {{ range where .Paginator.Pages.ByDate.Reverse "Section" "blog" | first 3 }}
-            <li class="border m-1 p-1">
-                <p><a href="{{ .Permalink }}">{{ .Title }}</a></p> {{/* display the post title */}}
-                {{ $dateTime := .PublishDate.Format "2006-01-02" }}
-                {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
-                <small>{{ .PublishDate.Format $dateFormat }}</small>  {{/* display the post date */}}
-                <p>{{ .Summary }}
-                </p>
+  <section class="home-content">
+    <div class="container mx-auto flex flex-row py-5">
+      <section class="flex-1 m-2 ml-0">
+          <h2 class="home-title uppercase text-sm">From Our Blog</h2>
+          <ul class="home-posts flex flew-row -mr-1 -ml-1">
+            {{ range where .Paginator.Pages.ByDate.Reverse "Section" "blog" | first 3 }}
+              <li class="m-1 p-5">
+                  {{ $dateTime := .PublishDate.Format "2006-01-02" }}
+                  {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+                  <small class="font-bold">{{ .PublishDate.Format $dateFormat }}</small> 
+                  <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3> 
+                  <p class="text-sm">{{ .Summary }}</p>
+                  <a class="home-readmore" href="{{ .Permalink }}">Read More</a>
+              </li>
+            {{ end }}
+          </ul>
+      </section>
+
+      <section class="w-1/3 m-2 mr-0">
+        <h2 class="home-title uppercase text-sm">Next Webinars</h2>
+        <ul class="home-webinars">
+          {{ range where .Paginator.Pages.ByDate.Reverse "Section" "webinar-events" | first 3 }}
+          <li>
+              {{ $dateTime := .PublishDate.Format "2006-01-02" }}
+              {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+              <small class="font-bold">{{ .PublishDate.Format $dateFormat }}</small> 
+              <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3> 
             </li>
           {{ end }}
-        </ul>
-    </section>
+        </ul>    
+      </section>
 
-    <section class="">
-      <h2>Next Webinars</h2>
-      <ul>
-        {{/* paginate all posts in the archive section of the content */}}
-        {{ range where .Paginator.Pages.ByDate.Reverse "Section" "webinar-events" | first 3 }}
-          <li>
-            <p><a href="{{ .Permalink }}">{{ .Title }}</a></p> {{/* display the post title */}}
-            <p>{{ .Date }}</p>  {{/* display the post date */}}
-          </li>
-        {{ end }}
-      </ul>    
-    </section>
-
-  </div>
+    </div>
+  </section>
 {{ end }}

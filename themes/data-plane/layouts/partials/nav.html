@@ -1,5 +1,5 @@
-<nav>
-  <ul class="flex">
+<nav class="flex-grow">
+  <ul class="flex justify-end uppercase font-bold">
     {{ $current := . }}
     {{ $type := .Type}}
     {{ range .Site.Menus.main }}
@@ -10,7 +10,7 @@
       {{ $active = or $active (and (eq .Name "Resources") (eq $current.Section "webinar-events")) }}
       {{ $active = or $active (and (eq .Name "Resources") (eq $type "tags")) }}
       {{ if .HasChildren }}
-        <li class="{{ if $active }}active{{ end }} mr-5">
+        <li class="{{ if $active }}active{{ end }} ml-5">
           <a href="#">{{ .Name }}</a>
           <ul class="sub-menu">
             {{ range .Children }}
@@ -23,7 +23,7 @@
           </ul>
         </li>
       {{ else }}
-        <li class="{{ if $active }}active{{ end }} mr-5">
+        <li class="{{ if $active }}active{{ end }} ml-5">
           <a href="{{ .URL }}">{{ .Name }}</a>
         </li>
       {{ end }}

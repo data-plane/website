@@ -1,15 +1,210 @@
+@font-face {
+  font-family: 'Bariol';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Bariol Regular'), url('../fonts/bariol_regular-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'Bariol';
+  font-style: italic;
+  font-weight: normal;
+  src: local('Bariol Regular Italic'), url('../fonts/bariol_regular_italic-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'Bariol';
+  font-style: italic;
+  font-weight: 100;
+  src: local('Bariol Thin Italic'), url('../fonts/bariol_thin_italic-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'Bariol';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Bariol Thin'), url('../fonts/bariol_thin-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'Bariol';
+  font-style: normal;
+  font-weight: light;
+  src: local('Bariol Light'), url('../fonts/bariol_light-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'Bariol';
+  font-style: italic;
+  font-weight:light;
+  src: local('Bariol Light Italic'), url('../fonts/bariol_light_italic-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'Bariol';
+  font-style: normal;
+  font-weight: bold;
+  src: local('Bariol Bold'), url('../fonts/bariol_bold-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'Bariol';
+  font-style: italic;
+  font-weight: bold;
+  src: local('Bariol Bold Italic'), url('../fonts/bariol_bold_italic-webfont.woff') format('woff');
+}
+/*GENERALES*/
+body{
+  font-family: 'Bariol';
+  line-height:1.3;
+  font-size:1rem;
+  background:rgb(122,42,141)
+}
 h1, h2, h3, h4{
   font-weight:bold
 }
 a{
-  color:purple
+  color:#662d91
 }
-nav .active a{
-  font-weight: bold;
+@media (min-width:1024px) {
+  .container{
+    padding:0 2vw
+  }
 }
-nav .sub-menu a{
+@media (max-width:639px) {
+  .container{
+    padding:0 2vw
+  }
+}
+/*HEADER*/
+header .logo{
+  background:url(/images/logo-inverted.svg) no-repeat top left;
+  background-size:contain;
+  overflow: hidden;
+  text-indent: -500000em;
+  width:280px;
+  height:70px
+}
+header .sub-menu{
+  position: absolute;
+  display:none
+}
+header li:hover .sub-menu{
+  display: block;
+}
+header nav a{
+  color:white;
+}
+header nav ul>li.active a,
+header nav a:hover{
+  color:#65c190
+}
+header nav ul>li.active>a:after{
+  content:'';
+  height:4px;
+  width: 100%;
+  background:#65c190;
+  display: block;
+}
+header .sub-menu li a{
+  font-size:.9rem;
   font-weight: normal;
+  color:white !important
 }
-nav .sub-menu .active a{
-  font-weight: bold;
+header .sub-menu li.active a,
+header .sub-menu li a:hover{
+  color:#65c190 !important;
+}
+header .sub-menu li.active a:after{
+  content:unset
+}
+
+/*HERO*/
+.video-bg{
+  position:fixed;
+  top:0;
+  z-index: -1;
+  max-width:unset;
+  height: unset;
+  mix-blend-mode: soft-light;
+  opacity:0.7
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-bg {
+      width:100vw;
+      height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-bg { 
+      width:auto;
+      height: 90vh;
+  }
+}
+@media (max-width: 767px) {
+  .video-bg {
+      display: none;
+  }
+}
+.hero:before{
+  content:'';
+  display: block;
+  position:fixed;
+  top:0;
+  width:100%;
+  height:100vh;
+  background: rgba(122,42,141);
+  background: linear-gradient(90deg, rgba(14,20,74,1) 0%, rgba(122,42,141,1) 100%);
+  z-index:-2;
+}
+.hero{
+  min-height: 90vh;
+  background:url(/images/shapes.svg) no-repeat;
+  background-size:120%;
+  background-position-y:bottom;
+  background-position-x: -2vh;
+}
+@media (orientation:portrait){
+  .hero{
+    background-size:auto 100vh;
+    background-position:bottom center
+  } 
+}
+.hero-title{
+  color:white;
+  font-size:4rem;
+  line-height: .9;
+}
+.hero-title span{
+  font-size:3rem;
+  display: block;
+}
+.hero-card{
+  background:rgba(255,255,255,.9)
+}
+.hero-card h2{
+  color:#662d91
+}
+.hero-card h2:after{
+  content: '';
+  display: block;
+  width:30px;
+  height: 4px;
+  margin-bottom:.5rem;
+  background:#65c190
+}
+.hero-link a{
+  display: inline-block;
+  background: #65c190;
+  color:white;
+  transition:all .3s
+}
+.hero-link a:hover{
+  background:#662d91
+}
+.home-content{
+  background:#e6e7e8 url(/images/shapes2.svg) no-repeat;
+  background-size:200vw;
+  background-position:-20vw -40vw
+}
+.home-title{
+  color:#662d91
+}
+.home-posts li{
+  background:white;
+  box-shadow: 0 0 2px rgba(0,0,0,.3);
 }
