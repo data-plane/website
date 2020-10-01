@@ -1,12 +1,16 @@
 {{ define "main" }}
 
   <div class="container mx-auto">
-    {{ partial "tag-cloud.html" .}}
     <h1 class="page-title">{{ .Title }}</h1>
-    <div class="page-content">    
-      <small>Author: {{ .Params.author }}</small>
-      <div>{{ partial "date-tags.html" . }}</div>
-      <div>{{ .Content }}</div>
+    <div class="flex">
+      <div class="page-content post-content flex-1">    
+        <div class="post-author font-bold">Author: {{ .Params.author }}</div>
+        <div class="post-date-tags font-bold mb-5">{{ partial "date-tags.html" . }}</div>
+        <div>{{ .Content }}</div>
+      </div>  
+      <div class="w-1/4 pl-5">
+        {{ partial "tag-cloud.html" .}}
+      </div>
     </div>
   </div>
 

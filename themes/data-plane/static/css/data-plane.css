@@ -344,3 +344,55 @@ footer nav .sub-menu li{
   background:rgba(255,255,255,.8);
   box-shadow: 0 0 2px rgba(0,0,0,.3);
 }
+
+.blog-list li{
+  background:url(../images/bullet.svg) no-repeat 0 .3rem;
+  background-size: 1.3rem;
+  padding-left: 1.6rem;  
+}
+.pagination{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+.pagination li{
+  margin-left:.3rem
+}
+.pagination li a{
+  font-size:.9rem;
+  font-weight: bold;
+  color:rgba(0,0,0,.3)
+}
+.pagination li a:hover{
+  color:rgba(0,0,0,.7)
+}
+.pagination li.disabled a{
+  color:rgba(0,0,0,.1)
+}
+.pagination li.active a{
+  color:#65c190
+}
+
+.post-content p,
+.webinars-events-content p{
+  margin-bottom:1rem
+}
+.post-content h1,
+.webinars-events-content h1{
+  font-size:1.5rem
+}
+.post-content h2,
+.webinars-events-content h2{
+  font-size:1.3rem
+}
+.post-content h3,
+.webinars-events-content h3,
+.post-content h4,
+.webinars-events-content h4,
+.post-content h5,
+.webinars-events-content h5,
+.post-content h6,
+.webinars-events-content h6{
+  font-size:1.1rem
+}

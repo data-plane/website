@@ -2,7 +2,7 @@ baseURL = "https://migueluza.github.io/data-plane"
 languageCode = "en"
 title = "Data Plane"
 theme = "data-plane"
-paginate = "2"
+paginate = "10"
 publishDir = "docs"
 
 [menu]

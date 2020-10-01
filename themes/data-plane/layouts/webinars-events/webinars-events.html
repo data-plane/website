@@ -2,13 +2,14 @@
 
   <div class="container mx-auto">
     <h1 class="page-title">{{ .Title }}</h1>
-    <div class="page-content">     
-      {{ template "_internal/pagination.html" . }}
-      <ul>
-        {{ $paginator := .Paginate (where .Data.Pages "Type" "webinar-events") }}
+    <div class="page-content flex-1">      
+      <ul class="blog-list mb-5">  
+        {{ $paginator := .Paginate (where .Data.Pages "Type" "webinars-events") }}
         {{ range $paginator.Pages }}
-          <li>
-            <h2><a class="" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          <li class="mb-5">
+            <h2 class="text-2xl"><a class="" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            <div class="text-sm">{{ .Summary}}</div>
+            <a class="blog-readmore font-bold text-xs mt-4" href="{{ .Permalink }}">Read More</a>
           </li>
         {{ end }}
       </ul>

@@ -9,8 +9,8 @@
     {{ $spread := sub $max $min }}
     {{ $fontStep := div $fontSpread $spread }}
 
-    <h2>Tagcloud</h2>
-    <div id="tag-cloud">
+    <h2 class="tagcloud-title uppercase text-xs">Tagcloud</h2>
+    <div class="tagcloud-content">
         {{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
             {{ $currentTagCount := len $taxonomy.Pages }}
             {{ $currentFontSize := (add $smallestFontSize (mul (sub $currentTagCount $min) $fontStep) ) }}
