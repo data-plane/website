@@ -184,6 +184,7 @@ header .sub-menu li.active a:after{
 .hero-title{
   color:white;
   font-size:4rem;
+  font-weight: lighter;
   line-height: .9;
 }
 .hero-title span{
