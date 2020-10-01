@@ -15,7 +15,7 @@
 }
 /*! Lighter */
 @font-face {
-	font-family: "Bariol";
+	font-family: "Bariol Light";
 	src: url("../fonts/Bariol-Light.eot");
 	src: url("../fonts/Bariol-Light.eot?#iefix") format("embedded-opentype"),
 		 url("../fonts/Bariol-Light.woff") format("woff"),
@@ -197,6 +197,7 @@ header .sub-menu li.active a:after{
   font-size:4rem;
   font-weight: lighter;
   line-height: .9;
+  font-family: 'Bariol Light';
 }
 .hero-title span{
   font-size:3rem;
@@ -336,7 +337,8 @@ footer nav .sub-menu li{
   font-weight: lighter;
   color:#65c190;
   line-height: 1;
-  margin-bottom:1rem
+  margin-bottom:1rem;
+  font-family: 'Bariol Light';
 }
 .page-content{
   padding:2rem;
