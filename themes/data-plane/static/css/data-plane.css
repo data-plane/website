@@ -51,13 +51,35 @@ body{
   font-family: 'Bariol';
   line-height:1.3;
   font-size:1rem;
+  background: rgba(122,42,141);
+  background-image:url(/images/shapes.svg), url(/images/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body.home{
   background:rgb(122,42,141)
 }
+body.services{
+  background-position: -40vw -10vh, right -40vh
+}
+body.blog{
+  background-position: -30vw 0, right -70vh
+}
+body.webinar-events{
+  background-position: 0vw -5vh, right -20vh
+}
+body.contact{
+  background-position: -30vw -10vh, right 0
+}
+
 h1, h2, h3, h4{
   font-weight:bold
 }
 a{
   color:#662d91
+}
+a:hover{
+  color:#65c190
 }
 @media (min-width:1024px) {
   .container{
@@ -139,6 +161,11 @@ header .sub-menu li.active a:after{
   .video-bg {
       display: none;
   }
+  .home #content{
+    background-image:url(/images/bg.jpg) !important;
+    background-size:cover !important;
+    background-position: center !important;
+  }
 }
 .hero:before{
   content:'';
@@ -191,10 +218,12 @@ header .sub-menu li.active a:after{
   display: inline-block;
   background: #65c190;
   color:white;
-  transition:all .3s
+  transition:all .3s;
+  border:1px solid transparent
 }
 .hero-link a:hover{
-  background:#662d91
+  background:#662d91;
+  border:1px solid white
 }
 .home-content{
   background:#e6e7e8 url(/images/shapes2.svg) no-repeat;
@@ -207,4 +236,64 @@ header .sub-menu li.active a:after{
 .home-posts li{
   background:white;
   box-shadow: 0 0 2px rgba(0,0,0,.3);
+}
+
+/*interiores*/
+#content{
+  margin-top:12rem;
+  background:#e6e7e8 url(/images/shapes2.svg) no-repeat;
+  background-size:200vw;
+  background-position:-20vw -40vw  
+}
+.home #content{
+  margin-top:0;
+  background:none
+}
+/*footer*/
+footer{
+  background-color: white;
+  border-bottom:30px solid #662d91
+}
+footer .logo{
+  background:url(/images/logo.svg) no-repeat top left;
+  background-size:contain;
+  overflow: hidden;
+  text-indent: -500000em;
+  width:180px;
+  height:50px  
+}
+.icon-twitter,
+.icon-github,
+.icon-linkedin{
+  display: inline-block;
+  width:25px;
+  height: 25px;
+  overflow: hidden;
+  text-indent: -500000em;
+  background-size:contain
+}
+.icon-twitter{
+  background:url(/images/icon-twitter.svg) no-repeat center;
+}
+.icon-github{
+  background:url(/images/icon-github.svg) no-repeat center;
+  background-size: 85%;
+}
+.icon-linkedin{
+  background:url(/images/icon-linkedin.svg) no-repeat center;
+  background-size: 90%;
+  transform: translateY(-3px);
+}
+footer nav ul{
+  justify-content: center !important;
+  font-size: .9rem;
+}
+footer nav .sub-menu{
+  font-weight: normal;
+  font-size:.8rem
+}
+footer nav .sub-menu li{
+  background:url(/images/bullet.svg) no-repeat 0 .3rem;
+  background-size: .5rem;
+  padding-left: .7rem;
 }

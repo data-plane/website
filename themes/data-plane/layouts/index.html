@@ -23,26 +23,26 @@
   </div>
   </section>
 
-  <section class="home-content">
-    <div class="container mx-auto flex flex-row py-5">
+  <section class="home-content pt-5 pb-10">
+    <div class="container mx-auto flex flex-row">
       <section class="flex-1 m-2 ml-0">
-          <h2 class="home-title uppercase text-sm">From Our Blog</h2>
+          <h2 class="home-title uppercase text-sm mb-2">From Our Blog</h2>
           <ul class="home-posts flex flew-row -mr-1 -ml-1">
             {{ range where .Paginator.Pages.ByDate.Reverse "Section" "blog" | first 3 }}
-              <li class="m-1 p-5">
+              <li class="m-1 p-5 flex flex-col">
                   {{ $dateTime := .PublishDate.Format "2006-01-02" }}
                   {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
                   <small class="font-bold">{{ .PublishDate.Format $dateFormat }}</small> 
                   <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3> 
-                  <p class="text-sm">{{ .Summary }}</p>
-                  <a class="home-readmore" href="{{ .Permalink }}">Read More</a>
+                  <p class="text-sm flex-1">{{ .Summary }}</p>
+                  <a class="home-readmore font-bold text-xs mt-4" href="{{ .Permalink }}">Read More</a>
               </li>
             {{ end }}
           </ul>
       </section>
 
       <section class="w-1/3 m-2 mr-0">
-        <h2 class="home-title uppercase text-sm">Next Webinars</h2>
+        <h2 class="home-title uppercase text-sm mb-2">Next Webinars</h2>
         <ul class="home-webinars">
           {{ range where .Paginator.Pages.ByDate.Reverse "Section" "webinar-events" | first 3 }}
           <li>
