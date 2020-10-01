@@ -1,17 +1,14 @@
 {{ define "main" }}
 
   <div class="container mx-auto">
-    {{ partial "tag-cloud.html" .}}
     <h1 class="page-title">{{ .Title }}</h1>
-    <div class="page-content">      
+    <div class="page-content">     
       {{ template "_internal/pagination.html" . }}
-      <ul>  
-        {{ $paginator := .Paginate (where .Data.Pages "Type" "blog") }}
-        {{ range $paginator.Pages.Reverse }}
+      <ul>
+        {{ $paginator := .Paginate (where .Data.Pages "Type" "webinar-events") }}
+        {{ range $paginator.Pages }}
           <li>
             <h2><a class="" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-            <div>{{ partial "date-tags.html" . }}</div>
-            <div>{{ .Summary}}</div>
           </li>
         {{ end }}
       </ul>

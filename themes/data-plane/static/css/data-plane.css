@@ -5,33 +5,44 @@
 /*! Regular */
 @font-face {
 	font-family: "Bariol";
-	src: url("../fonts/Bariol/bariol_regular.eot");
-	src: url("../fonts/Bariol/bariol_regular.eot?#iefix") format("embedded-opentype"),
-		 url("../fonts/Bariol/bariol_regular.woff") format("woff"),
-		 url("../fonts/Bariol/bariol_regular.ttf") format("truetype"),
-		 url("../fonts/Bariol/bariol_regular.svg#BariolRegularRegular") format("svg");
+	src: url("../fonts/bariol_regular.eot");
+	src: url("../fonts/bariol_regular.eot?#iefix") format("embedded-opentype"),
+		 url("../fonts/bariol_regular.woff") format("woff"),
+		 url("../fonts/bariol_regular.ttf") format("truetype"),
+		 url("../fonts/bariol_regular.svg#BariolRegularRegular") format("svg");
 	font-weight: normal;
+	font-style: normal;
+}
+/*! Lighter */
+@font-face {
+	font-family: "Bariol";
+	src: url("../fonts/Bariol-Light.eot");
+	src: url("../fonts/Bariol-Light.eot?#iefix") format("embedded-opentype"),
+		 url("../fonts/Bariol-Light.woff") format("woff"),
+		 url("../fonts/Bariol-Light.ttf") format("truetype"),
+		 url("../fonts/Bariol-Light.svg#BariolRegularRegular") format("svg");
+	font-weight: lighter;
 	font-style: normal;
 }
 /*! Bold */
 @font-face {
 	font-family: "Bariol";
-	src: url("../fonts/Bariol/bariol_bold.eot");
-	src: url("../fonts/Bariol/bariol_bold.eot?#iefix") format("embedded-opentype"),
-		 url("../fonts/Bariol/bariol_bold.woff") format("woff"),
-		 url("../fonts/Bariol/bariol_bold.ttf") format("truetype"),
-		 url("../fonts/Bariol/bariol_bold.svg#BariolRegularRegular") format("svg");
+	src: url("../fonts/bariol_bold.eot");
+	src: url("../fonts/bariol_bold.eot?#iefix") format("embedded-opentype"),
+		 url("../fonts/bariol_bold.woff") format("woff"),
+		 url("../fonts/bariol_bold.ttf") format("truetype"),
+		 url("../fonts/bariol_bold.svg#BariolRegularRegular") format("svg");
 	font-weight: bold;
 	font-style: normal;
 }
 /*! Italic */
 @font-face {
 	font-family: "Bariol";
-	src: url("../fonts/Bariol/bariol_thin.eot");
-	src: url("../fonts/Bariol/bariol_thin.eot?#iefix") format("embedded-opentype"),
-		 url("../fonts/Bariol/bariol_thin.woff") format("woff"),
-		 url("../fonts/Bariol/bariol_thin.ttf") format("truetype"),
-		 url("../fonts/Bariol/bariol_thin.svg#BariolRegularRegular") format("svg");
+	src: url("../fonts/bariol_thin.eot");
+	src: url("../fonts/bariol_thin.eot?#iefix") format("embedded-opentype"),
+		 url("../fonts/bariol_thin.woff") format("woff"),
+		 url("../fonts/bariol_thin.ttf") format("truetype"),
+		 url("../fonts/bariol_thin.svg#BariolRegularRegular") format("svg");
 	font-weight: normal;
 	font-style: italic;
 }
@@ -192,7 +203,8 @@ header .sub-menu li.active a:after{
   display: block;
 }
 .hero-card{
-  background:rgba(255,255,255,.9)
+  background:rgba(255,255,255,.9);
+  box-shadow: 0 0 2px rgba(0,0,0,.3);
 }
 .hero-card h2{
   color:#662d91
@@ -228,18 +240,31 @@ header .sub-menu li.active a:after{
   background:white;
   box-shadow: 0 0 2px rgba(0,0,0,.3);
 }
+.home-webinars li{
+  background:url(../images/bullet.svg) no-repeat 0 .3rem;
+  background-size: .7rem;
+  padding-left: 1rem;
+}
+.home-webinars-viewall{
+  color:rgba(0,0,0,.5);
+  position: relative;
+}
+.home-webinars-viewall:before,
+.home-webinars-viewall:after{
+  content:'';
+  width:40%;
+  height:1px;
+  background:rgba(0,0,0,.3);
+  display: inline-block;
+  position: absolute;
+  left:0;
+  top:.4rem
+}
+.home-webinars-viewall:after{
+  left:unset;
+  right:0
+}
 
-/*interiores*/
-#content{
-  margin-top:12rem;
-  background:#e6e7e8 url(../images/shapes2.svg) no-repeat;
-  background-size:200vw;
-  background-position:-20vw -40vw  
-}
-.home #content{
-  margin-top:0;
-  background:none
-}
 /*footer*/
 footer{
   background-color: white;
@@ -287,4 +312,35 @@ footer nav .sub-menu li{
   background:url(../images/bullet.svg) no-repeat 0 .3rem;
   background-size: .5rem;
   padding-left: .7rem;
+}
+
+/*interiores*/
+#content{
+  margin-top:12rem;
+  background:#e6e7e8 url(../images/shapes2.svg) no-repeat;
+  background-size:200vw;
+  background-position:-20vw -40vw  
+}
+.home #content{
+  margin-top:0;
+  background:none
+}
+#breadcrumbs{
+  margin-top:1rem;
+  font-size:.65rem;
+  font-weight: bold;
+  margin-bottom:.2rem
+}
+.page-title{
+  font-size: 3rem;
+  font-weight: lighter;
+  color:#65c190;
+  line-height: 1;
+  margin-bottom:1rem
+}
+.page-content{
+  padding:2rem;
+  margin-bottom:2rem;
+  background:rgba(255,255,255,.8);
+  box-shadow: 0 0 2px rgba(0,0,0,.3);
 }
