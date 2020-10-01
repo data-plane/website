@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Enterprise cloud data plane. Any environment. Any service. on Data Plane</title>
+    <link>https://migueluza.github.io/data-plane/</link>
+    <description>Recent content in Enterprise cloud data plane. Any environment. Any service. on Data Plane</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 31 Aug 2020 13:05:16 +0200</lastBuildDate>
+    
+	<atom:link href="https://migueluza.github.io/data-plane/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Another Post the Forth Really</title>
+      <link>https://migueluza.github.io/data-plane/blog/another-post-the-forth-really/</link>
+      <pubDate>Sun, 06 Sep 2020 21:19:00 +0200</pubDate>
+      
+      <guid>https://migueluza.github.io/data-plane/blog/another-post-the-forth-really/</guid>
+      <description>&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Este es el post número tres</title>
+      <link>https://migueluza.github.io/data-plane/blog/este-es-el-post-numero-tres/</link>
+      <pubDate>Thu, 03 Sep 2020 20:56:54 +0200</pubDate>
+      
+      <guid>https://migueluza.github.io/data-plane/blog/este-es-el-post-numero-tres/</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Webinar 2</title>
+      <link>https://migueluza.github.io/data-plane/webinars-events/webinar-2/</link>
+      <pubDate>Thu, 03 Sep 2020 20:56:54 +0200</pubDate>
+      
+      <guid>https://migueluza.github.io/data-plane/webinars-events/webinar-2/</guid>
+      <description>&lt;p&gt;18h UTC+5&lt;/p&gt;
+&lt;p&gt;https:/asdfasdf.as/asfasfd&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.google.com&#34;&gt;More Info&lt;/a&gt; &lt;a href=&#34;https://www.google.com&#34;&gt;Register&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Services</title>
+      <link>https://migueluza.github.io/data-plane/services/</link>
+      <pubDate>Tue, 01 Sep 2020 19:21:39 +0200</pubDate>
+      
+      <guid>https://migueluza.github.io/data-plane/services/</guid>
+      <description>Services text</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://migueluza.github.io/data-plane/contact/</link>
+      <pubDate>Tue, 01 Sep 2020 19:20:50 +0200</pubDate>
+      
+      <guid>https://migueluza.github.io/data-plane/contact/</guid>
+      <description>Contact text</description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>https://migueluza.github.io/data-plane/privacy-policy/</link>
+      <pubDate>Mon, 31 Aug 2020 16:17:02 +0200</pubDate>
+      
+      <guid>https://migueluza.github.io/data-plane/privacy-policy/</guid>
+      <description>Text Privacy Policy</description>
+    </item>
+    
+    <item>
+      <title>Post 1</title>
+      <link>https://migueluza.github.io/data-plane/blog/post-1/</link>
+      <pubDate>Mon, 31 Aug 2020 13:24:28 +0200</pubDate>
+      
+      <guid>https://migueluza.github.io/data-plane/blog/post-1/</guid>
+      <description>&lt;p&gt;hola este es el primer post. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Post 2</title>
+      <link>https://migueluza.github.io/data-plane/blog/post-2/</link>
+      <pubDate>Mon, 31 Aug 2020 13:24:28 +0200</pubDate>
+      
+      <guid>https://migueluza.github.io/data-plane/blog/post-2/</guid>
+      <description>&lt;p&gt;hola este es el segundo post. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Webinar Número uno</title>
+      <link>https://migueluza.github.io/data-plane/webinars-events/webinar-1/</link>
+      <pubDate>Mon, 31 Aug 2020 13:24:28 +0200</pubDate>
+      
+      <guid>https://migueluza.github.io/data-plane/webinars-events/webinar-1/</guid>
+      <description>&lt;p&gt;18h UTC+5&lt;/p&gt;
+&lt;p&gt;https:/asdfasdf.as/asfasfd&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.google.com&#34;&gt;More Info&lt;/a&gt; &lt;a href=&#34;https://www.google.com&#34;&gt;Register&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

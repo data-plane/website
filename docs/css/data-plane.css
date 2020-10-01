@@ -1,0 +1,400 @@
+/*------------------------------------*\
+    #@FONT-FACE
+\*------------------------------------*/
+/*! ----------Bariol---------- */
+/*! Regular */
+@font-face {
+	font-family: "Bariol";
+	src: url("../fonts/bariol_regular.eot");
+	src: url("../fonts/bariol_regular.eot?#iefix") format("embedded-opentype"),
+		 url("../fonts/bariol_regular.woff") format("woff"),
+		 url("../fonts/bariol_regular.ttf") format("truetype"),
+		 url("../fonts/bariol_regular.svg#BariolRegularRegular") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+/*! Lighter */
+@font-face {
+	font-family: "Bariol Light";
+	src: url("../fonts/Bariol-Light.eot");
+	src: url("../fonts/Bariol-Light.eot?#iefix") format("embedded-opentype"),
+		 url("../fonts/Bariol-Light.woff") format("woff"),
+		 url("../fonts/Bariol-Light.ttf") format("truetype"),
+		 url("../fonts/Bariol-Light.svg#BariolRegularRegular") format("svg");
+	font-weight: lighter;
+	font-style: normal;
+}
+/*! Bold */
+@font-face {
+	font-family: "Bariol";
+	src: url("../fonts/bariol_bold.eot");
+	src: url("../fonts/bariol_bold.eot?#iefix") format("embedded-opentype"),
+		 url("../fonts/bariol_bold.woff") format("woff"),
+		 url("../fonts/bariol_bold.ttf") format("truetype"),
+		 url("../fonts/bariol_bold.svg#BariolRegularRegular") format("svg");
+	font-weight: bold;
+	font-style: normal;
+}
+/*! Italic */
+@font-face {
+	font-family: "Bariol";
+	src: url("../fonts/bariol_thin.eot");
+	src: url("../fonts/bariol_thin.eot?#iefix") format("embedded-opentype"),
+		 url("../fonts/bariol_thin.woff") format("woff"),
+		 url("../fonts/bariol_thin.ttf") format("truetype"),
+		 url("../fonts/bariol_thin.svg#BariolRegularRegular") format("svg");
+	font-weight: normal;
+	font-style: italic;
+}
+/*GENERALES*/
+body{
+  font-family: 'Bariol';
+  line-height:1.3;
+  font-size:1rem;
+  background: rgba(122,42,141);
+  background-image:url(../images/shapes.svg), url(../images/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0vw -30vh, right -1px
+}
+body.home{
+  background:rgb(122,42,141)
+}
+body.services{
+  background-position: -40vw -10vh, right -40vh
+}
+body.blog{
+  background-position: -30vw 0, right -70vh
+}
+body.webinar-events{
+  background-position: 0vw -5vh, right -20vh
+}
+body.contact{
+  background-position: -30vw -10vh, right -1px
+}
+
+h1, h2, h3, h4{
+  font-weight:bold
+}
+a{
+  color:#662d91
+}
+a:hover{
+  color:#65c190
+}
+@media (min-width:1024px) {
+  .container{
+    padding:0 2vw
+  }
+}
+@media (max-width:639px) {
+  .container{
+    padding:0 2vw
+  }
+}
+/*HEADER*/
+header .logo{
+  background:url(../images/logo-inverted.svg) no-repeat top left;
+  background-size:contain;
+  overflow: hidden;
+  text-indent: -500000em;
+  width:280px;
+  height:70px
+}
+header .sub-menu{
+  position: absolute;
+  display:none
+}
+header li:hover .sub-menu{
+  display: block;
+}
+header nav a{
+  color:white;
+}
+header nav ul>li.active a,
+header nav a:hover{
+  color:#65c190
+}
+header nav ul>li.active>a:after{
+  content:'';
+  height:4px;
+  width: 100%;
+  background:#65c190;
+  display: block;
+}
+header .sub-menu li a{
+  font-size:.9rem;
+  font-weight: normal;
+  color:white !important
+}
+header .sub-menu li.active a,
+header .sub-menu li a:hover{
+  color:#65c190 !important;
+}
+header .sub-menu li.active a:after{
+  content:unset
+}
+
+/*HERO*/
+.video-bg{
+  position:fixed;
+  top:0;
+  z-index: -1;
+  max-width:unset;
+  height: unset;
+  mix-blend-mode: soft-light;
+  opacity:0.7
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-bg {
+      width:100vw;
+      height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-bg { 
+      width:auto;
+      height: 90vh;
+  }
+}
+@media (max-width: 767px) {
+  .video-bg {
+      display: none;
+  }
+  .home #content{
+    background-image:url(../images/bg.jpg) !important;
+    background-size:cover !important;
+    background-position: center !important;
+  }
+}
+.hero:before{
+  content:'';
+  display: block;
+  position:fixed;
+  top:0;
+  width:100%;
+  height:100vh;
+  background: rgba(122,42,141);
+  background: linear-gradient(90deg, rgba(14,20,74,1) 0%, rgba(122,42,141,1) 100%);
+  z-index:-2;
+}
+.hero{
+  min-height: 90vh;
+  background:url(../images/shapes.svg) no-repeat;
+  background-size:120%;
+  background-position-y:bottom;
+  background-position-x: -2vh;
+}
+@media (orientation:portrait){
+  .hero{
+    background-size:auto 100vh;
+    background-position:bottom center
+  } 
+}
+.hero-title{
+  color:white;
+  font-size:4rem;
+  font-weight: lighter;
+  line-height: .9;
+  font-family: 'Bariol Light';
+}
+.hero-title span{
+  font-size:3rem;
+  display: block;
+}
+.hero-card{
+  background:rgba(255,255,255,.9);
+  box-shadow: 0 0 2px rgba(0,0,0,.3);
+}
+.hero-card h2{
+  color:#662d91
+}
+.hero-card h2:after{
+  content: '';
+  display: block;
+  width:30px;
+  height: 4px;
+  margin-bottom:.5rem;
+  background:#65c190
+}
+.hero-link a{
+  display: inline-block;
+  background: #65c190;
+  color:white;
+  transition:all .3s;
+  border:1px solid transparent
+}
+.hero-link a:hover{
+  background:#662d91;
+  border:1px solid white
+}
+.home-content{
+  background:#e6e7e8 url(../images/shapes2.svg) no-repeat;
+  background-size:200vw;
+  background-position:-20vw -40vw
+}
+.home-title{
+  color:#662d91
+}
+.home-posts li{
+  background:white;
+  box-shadow: 0 0 2px rgba(0,0,0,.3);
+}
+.home-webinars li{
+  background:url(../images/bullet.svg) no-repeat 0 .3rem;
+  background-size: .7rem;
+  padding-left: 1rem;
+}
+.home-webinars-viewall{
+  color:rgba(0,0,0,.5);
+  position: relative;
+}
+.home-webinars-viewall:before,
+.home-webinars-viewall:after{
+  content:'';
+  width:40%;
+  height:1px;
+  background:rgba(0,0,0,.3);
+  display: inline-block;
+  position: absolute;
+  left:0;
+  top:.4rem
+}
+.home-webinars-viewall:after{
+  left:unset;
+  right:0
+}
+
+/*footer*/
+footer{
+  background-color: white;
+  border-bottom:30px solid #662d91
+}
+footer .logo{
+  background:url(../images/logo.svg) no-repeat top left;
+  background-size:contain;
+  overflow: hidden;
+  text-indent: -500000em;
+  width:180px;
+  height:50px  
+}
+.icon-twitter,
+.icon-github,
+.icon-linkedin{
+  display: inline-block;
+  width:25px;
+  height: 25px;
+  overflow: hidden;
+  text-indent: -500000em;
+  background-size:contain
+}
+.icon-twitter{
+  background:url(../images/icon-twitter.svg) no-repeat center;
+}
+.icon-github{
+  background:url(../images/icon-github.svg) no-repeat center;
+  background-size: 85%;
+}
+.icon-linkedin{
+  background:url(../images/icon-linkedin.svg) no-repeat center;
+  background-size: 90%;
+  transform: translateY(-3px);
+}
+footer nav ul{
+  justify-content: center !important;
+  font-size: .9rem;
+}
+footer nav .sub-menu{
+  font-weight: normal;
+  font-size:.8rem
+}
+footer nav .sub-menu li{
+  background:url(../images/bullet.svg) no-repeat 0 .3rem;
+  background-size: .5rem;
+  padding-left: .7rem;
+}
+
+/*interiores*/
+#content{
+  margin-top:12rem;
+  background:#e6e7e8 url(../images/shapes2.svg) no-repeat;
+  background-size:200vw;
+  background-position:-20vw -40vw  
+}
+.home #content{
+  margin-top:0;
+  background:none
+}
+#breadcrumbs{
+  margin-top:1rem;
+  font-size:.65rem;
+  font-weight: bold;
+  margin-bottom:.2rem
+}
+.page-title{
+  font-size: 3rem;
+  font-weight: lighter;
+  color:#65c190;
+  line-height: 1;
+  margin-bottom:1rem;
+  font-family: 'Bariol Light';
+}
+.page-content{
+  padding:2rem;
+  margin-bottom:2rem;
+  background:rgba(255,255,255,.8);
+  box-shadow: 0 0 2px rgba(0,0,0,.3);
+}
+
+.blog-list li{
+  background:url(../images/bullet.svg) no-repeat 0 .3rem;
+  background-size: 1.3rem;
+  padding-left: 1.6rem;  
+}
+.pagination{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+.pagination li{
+  margin-left:.3rem
+}
+.pagination li a{
+  font-size:.9rem;
+  font-weight: bold;
+  color:rgba(0,0,0,.3)
+}
+.pagination li a:hover{
+  color:rgba(0,0,0,.7)
+}
+.pagination li.disabled a{
+  color:rgba(0,0,0,.1)
+}
+.pagination li.active a{
+  color:#65c190
+}
+
+.post-content p,
+.webinars-events-content p{
+  margin-bottom:1rem
+}
+.post-content h1,
+.webinars-events-content h1{
+  font-size:1.5rem
+}
+.post-content h2,
+.webinars-events-content h2{
+  font-size:1.3rem
+}
+.post-content h3,
+.webinars-events-content h3,
+.post-content h4,
+.webinars-events-content h4,
+.post-content h5,
+.webinars-events-content h5,
+.post-content h6,
+.webinars-events-content h6{
+  font-size:1.1rem
+}
