@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     {{- partial "head.html" . -}}
     <body class="flex flex-col min-h-screen {{if .IsHome}}home{{else}}{{.Type}}{{end}} {{ .File.BaseFileName }} ">
         {{- partial "header.html" . -}}
