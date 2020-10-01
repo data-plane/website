@@ -1,50 +1,39 @@
+/*------------------------------------*\
+    #@FONT-FACE
+\*------------------------------------*/
+/*! ----------Bariol---------- */
+/*! Regular */
 @font-face {
-  font-family: 'Bariol';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Bariol Regular'), url('../fonts/bariol_regular-webfont.woff') format('woff');
+	font-family: "Bariol";
+	src: url("../fonts/Bariol/bariol_regular.eot");
+	src: url("../fonts/Bariol/bariol_regular.eot?#iefix") format("embedded-opentype"),
+		 url("../fonts/Bariol/bariol_regular.woff") format("woff"),
+		 url("../fonts/Bariol/bariol_regular.ttf") format("truetype"),
+		 url("../fonts/Bariol/bariol_regular.svg#BariolRegularRegular") format("svg");
+	font-weight: normal;
+	font-style: normal;
 }
+/*! Bold */
 @font-face {
-  font-family: 'Bariol';
-  font-style: italic;
-  font-weight: normal;
-  src: local('Bariol Regular Italic'), url('../fonts/bariol_regular_italic-webfont.woff') format('woff');
+	font-family: "Bariol";
+	src: url("../fonts/Bariol/bariol_bold.eot");
+	src: url("../fonts/Bariol/bariol_bold.eot?#iefix") format("embedded-opentype"),
+		 url("../fonts/Bariol/bariol_bold.woff") format("woff"),
+		 url("../fonts/Bariol/bariol_bold.ttf") format("truetype"),
+		 url("../fonts/Bariol/bariol_bold.svg#BariolRegularRegular") format("svg");
+	font-weight: bold;
+	font-style: normal;
 }
+/*! Italic */
 @font-face {
-  font-family: 'Bariol';
-  font-style: italic;
-  font-weight: 100;
-  src: local('Bariol Thin Italic'), url('../fonts/bariol_thin_italic-webfont.woff') format('woff');
-}
-@font-face {
-  font-family: 'Bariol';
-  font-style: normal;
-  font-weight: 100;
-  src: local('Bariol Thin'), url('../fonts/bariol_thin-webfont.woff') format('woff');
-}
-@font-face {
-  font-family: 'Bariol';
-  font-style: normal;
-  font-weight: light;
-  src: local('Bariol Light'), url('../fonts/bariol_light-webfont.woff') format('woff');
-}
-@font-face {
-  font-family: 'Bariol';
-  font-style: italic;
-  font-weight:light;
-  src: local('Bariol Light Italic'), url('../fonts/bariol_light_italic-webfont.woff') format('woff');
-}
-@font-face {
-  font-family: 'Bariol';
-  font-style: normal;
-  font-weight: bold;
-  src: local('Bariol Bold'), url('../fonts/bariol_bold-webfont.woff') format('woff');
-}
-@font-face {
-  font-family: 'Bariol';
-  font-style: italic;
-  font-weight: bold;
-  src: local('Bariol Bold Italic'), url('../fonts/bariol_bold_italic-webfont.woff') format('woff');
+	font-family: "Bariol";
+	src: url("../fonts/Bariol/bariol_thin.eot");
+	src: url("../fonts/Bariol/bariol_thin.eot?#iefix") format("embedded-opentype"),
+		 url("../fonts/Bariol/bariol_thin.woff") format("woff"),
+		 url("../fonts/Bariol/bariol_thin.ttf") format("truetype"),
+		 url("../fonts/Bariol/bariol_thin.svg#BariolRegularRegular") format("svg");
+	font-weight: normal;
+	font-style: italic;
 }
 /*GENERALES*/
 body{
@@ -52,9 +41,10 @@ body{
   line-height:1.3;
   font-size:1rem;
   background: rgba(122,42,141);
-  background-image:url(/images/shapes.svg), url(/images/bg.jpg);
+  background-image:url(../images/shapes.svg), url(../images/bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 0vw -30vh, right -1px
 }
 body.home{
   background:rgb(122,42,141)
@@ -69,7 +59,7 @@ body.webinar-events{
   background-position: 0vw -5vh, right -20vh
 }
 body.contact{
-  background-position: -30vw -10vh, right 0
+  background-position: -30vw -10vh, right -1px
 }
 
 h1, h2, h3, h4{
@@ -93,7 +83,7 @@ a:hover{
 }
 /*HEADER*/
 header .logo{
-  background:url(/images/logo-inverted.svg) no-repeat top left;
+  background:url(../images/logo-inverted.svg) no-repeat top left;
   background-size:contain;
   overflow: hidden;
   text-indent: -500000em;
@@ -162,7 +152,7 @@ header .sub-menu li.active a:after{
       display: none;
   }
   .home #content{
-    background-image:url(/images/bg.jpg) !important;
+    background-image:url(../images/bg.jpg) !important;
     background-size:cover !important;
     background-position: center !important;
   }
@@ -180,7 +170,7 @@ header .sub-menu li.active a:after{
 }
 .hero{
   min-height: 90vh;
-  background:url(/images/shapes.svg) no-repeat;
+  background:url(../images/shapes.svg) no-repeat;
   background-size:120%;
   background-position-y:bottom;
   background-position-x: -2vh;
@@ -226,7 +216,7 @@ header .sub-menu li.active a:after{
   border:1px solid white
 }
 .home-content{
-  background:#e6e7e8 url(/images/shapes2.svg) no-repeat;
+  background:#e6e7e8 url(../images/shapes2.svg) no-repeat;
   background-size:200vw;
   background-position:-20vw -40vw
 }
@@ -241,7 +231,7 @@ header .sub-menu li.active a:after{
 /*interiores*/
 #content{
   margin-top:12rem;
-  background:#e6e7e8 url(/images/shapes2.svg) no-repeat;
+  background:#e6e7e8 url(../images/shapes2.svg) no-repeat;
   background-size:200vw;
   background-position:-20vw -40vw  
 }
@@ -255,7 +245,7 @@ footer{
   border-bottom:30px solid #662d91
 }
 footer .logo{
-  background:url(/images/logo.svg) no-repeat top left;
+  background:url(../images/logo.svg) no-repeat top left;
   background-size:contain;
   overflow: hidden;
   text-indent: -500000em;
@@ -273,14 +263,14 @@ footer .logo{
   background-size:contain
 }
 .icon-twitter{
-  background:url(/images/icon-twitter.svg) no-repeat center;
+  background:url(../images/icon-twitter.svg) no-repeat center;
 }
 .icon-github{
-  background:url(/images/icon-github.svg) no-repeat center;
+  background:url(../images/icon-github.svg) no-repeat center;
   background-size: 85%;
 }
 .icon-linkedin{
-  background:url(/images/icon-linkedin.svg) no-repeat center;
+  background:url(../images/icon-linkedin.svg) no-repeat center;
   background-size: 90%;
   transform: translateY(-3px);
 }
@@ -293,7 +283,7 @@ footer nav .sub-menu{
   font-size:.8rem
 }
 footer nav .sub-menu li{
-  background:url(/images/bullet.svg) no-repeat 0 .3rem;
+  background:url(../images/bullet.svg) no-repeat 0 .3rem;
   background-size: .5rem;
   padding-left: .7rem;
 }

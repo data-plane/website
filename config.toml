@@ -1,4 +1,4 @@
-baseURL = "https://migueluza.github.io/"
+baseURL = "https://migueluza.github.io/data-plane"
 languageCode = "es"
 title = "Data Plane"
 theme = "data-plane"
