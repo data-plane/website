@@ -72,7 +72,12 @@ body.webinars-events{
 body.contact{
   background-position: -30vw -10vh, right -1px
 }
+@media (max-width:640px) {
+  body{
+    background-size: 150vw,cover;
+  }
 
+}
 h1, h2, h3, h4{
   font-weight:bold
 }
@@ -419,6 +424,11 @@ footer nav .sub-menu li{
   background:#e6e7e8 url(../images/shapes2.svg) no-repeat;
   background-size:200vw;
   background-position:-20vw -40vw  
+}
+@media (max-width:640px) {
+ #content{
+   margin-top:8rem
+ } 
 }
 .home #content{
   margin-top:0;
