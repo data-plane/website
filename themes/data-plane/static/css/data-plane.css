@@ -444,7 +444,14 @@ footer nav .sub-menu li{
   background:rgba(255,255,255,.8);
   box-shadow: 0 0 2px rgba(0,0,0,.3);
 }
-
+@media (max-width:640px){
+  .page-title{
+    font-size:2rem
+  }
+  .page-content{
+    padding:1rem
+  }
+}
 .blog-list li{
   background:url(../images/bullet.svg) no-repeat 0 .3rem;
   background-size: 1.3rem;
