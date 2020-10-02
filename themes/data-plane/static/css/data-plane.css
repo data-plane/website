@@ -87,7 +87,7 @@ a:hover{
     padding:0 2vw
   }
 }
-@media (max-width:639px) {
+@media (max-width:768px) {
   .container{
     padding:0 2vw
   }
@@ -159,6 +159,61 @@ header.headroom--not-top .logo{
   height:50px;
   background-size:cover;
 }
+.hamburger{
+  outline:none !important;
+  padding:0
+}
+@media (min-width:768px){
+  .hamburger-container{
+    display: none;
+  }  
+}
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before{
+  background-color:white !important
+}
+/*responsive menu*/
+@media (max-width:767px){
+  header{
+    z-index:1
+  }
+  header .logo{
+    width:250px;
+    height:50px
+  }
+  header nav.is-active{
+    display: block;
+    background: #662d91;
+    position:absolute;
+    z-index:-1;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    padding:8rem 1rem 1rem 1rem
+  }
+  header nav ul li{
+    margin-bottom:1rem;
+    margin-left:0 !important
+  }
+  header nav ul li a{
+    display: inline-block;
+  }
+  header .sub-menu{
+    display: block;
+    height:auto;
+    background: none;
+    position: relative;
+    padding:0 0 0 1rem;
+    margin-top:.5rem
+  }
+  header .sub-menu li{
+    margin-bottom: .5rem;
+  }
+  header .sub-menu li.active a,
+  header .sub-menu li a:hover{
+    color:#65c190 !important
+  }
+}
 /*HERO*/
 .video-bg{
   position:fixed;
@@ -189,7 +244,7 @@ header.headroom--not-top .logo{
   .home #content{
     background-image:url(../images/bg.jpg) !important;
     background-size:cover !important;
-    background-position: center !important;
+    background-position: center -5px !important;
   }
 }
 .hero:before{
@@ -253,6 +308,25 @@ header.headroom--not-top .logo{
   background:#662d91;
   border:1px solid white
 }
+@media (max-width:640px) {
+  .hero{
+    background-position-y: top;
+  }
+  .hero-title{
+    margin-top:10rem;
+    font-size:3rem
+  }
+  .hero-title span{
+    font-size:2.5rem
+  }
+  @media (orientation:portrait){
+    .hero-title{
+      margin-top:12rem;
+      margin-bottom:5rem
+    }
+  }
+}
+/*HOME CONTENT*/
 .home-content{
   background:#e6e7e8 url(../images/shapes2.svg) no-repeat;
   background-size:200vw;

@@ -3,6 +3,7 @@
   <meta charset="utf-8">
 
   <link href="https://migueluza.github.io/data-plane/css/style.css" type="text/css" rel="stylesheet" />
+  <link href="https://migueluza.github.io/data-plane/css/hamburgers.min.css" rel="stylesheet">
   <link href="https://migueluza.github.io/data-plane/css/data-plane.css" type="text/css" rel="stylesheet" />
   
   
@@ -31,8 +32,8 @@
 </head><body class="flex flex-col min-h-screen tags  "><header class="fixed w-full top-0 pt-10 pb-5">
   <div class="container mx-auto flex flex-row items-center">
     <h1 class="logo">Data Plane</h1>
-    <nav class="flex-grow">
-  <ul class="flex justify-end uppercase font-bold">
+    <nav class="flex-grow hidden md:block">
+  <ul class="md:flex md:justify-end uppercase font-bold">
     
     
     
@@ -100,7 +101,14 @@
       
     
   </ul>
-</nav>  
+</nav> 
+    <div class="hamburger-container flex-grow flex justify-end">
+      <button class="hamburger hamburger--emphatic hidden" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>   
+    </div> 
   </div>
 </header><section id="content" class="flex-1">
   <div id="breadcrumbs" class="uppercase text-xs">
@@ -179,7 +187,7 @@
 
 
         </section><footer class="py-5">
-  <div class="container mx-auto flex flex-row py-4">
+  <div class="container mx-auto md:flex flex-row py-4">
     <div class="">
       <h2 class="logo mb-3">Data Plane</h2>
       <ul class="flex flex-row">
@@ -189,8 +197,8 @@
       </ul>      
     </div>
     <div class="flex-1 mx-10 mt-3">
-      <nav class="flex-grow">
-  <ul class="flex justify-end uppercase font-bold">
+      <nav class="flex-grow hidden md:block">
+  <ul class="md:flex md:justify-end uppercase font-bold">
     
     
     
@@ -276,6 +284,10 @@
             $('header').headroom({
                 "offset": 100,
             });
+            $('.hamburger').on('click', function(){
+                $(this).toggleClass('is-active');
+                $('nav').toggleClass('is-active');
+            })
         });        
     </script>
 </html>

@@ -4,6 +4,7 @@
   <meta charset="utf-8">
 
   <link href="https://migueluza.github.io/data-plane/css/style.css" type="text/css" rel="stylesheet" />
+  <link href="https://migueluza.github.io/data-plane/css/hamburgers.min.css" rel="stylesheet">
   <link href="https://migueluza.github.io/data-plane/css/data-plane.css" type="text/css" rel="stylesheet" />
   
   
@@ -32,8 +33,8 @@
 </head><body class="flex flex-col min-h-screen home _index "><header class="fixed w-full top-0 pt-10 pb-5">
   <div class="container mx-auto flex flex-row items-center">
     <h1 class="logo">Data Plane</h1>
-    <nav class="flex-grow">
-  <ul class="flex justify-end uppercase font-bold">
+    <nav class="flex-grow hidden md:block">
+  <ul class="md:flex md:justify-end uppercase font-bold">
     
     
     
@@ -101,7 +102,14 @@
       
     
   </ul>
-</nav>  
+</nav> 
+    <div class="hamburger-container flex-grow flex justify-end">
+      <button class="hamburger hamburger--emphatic hidden" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>   
+    </div> 
   </div>
 </header><section id="content" class="flex-1">
 
@@ -109,17 +117,17 @@
   <video class="video-bg" src="https://migueluza.github.io/data-plane/images/dataplane.mp4" autoplay="true" loop="true" muted="true"></video>
   <section class="hero flex flex-col justify-end">
     <div class="container mx-auto">
-      <h1 class="hero-title mt-32 mb-16 font-normal"><span>Enterprise cloud data plane.</span>Any environment. Any service.</h1>
-      <div class="hero-text flex">
-        <div class="hero-card w-1/3 m-2 ml-0 p-3">
+      <h1 class="hero-title mt-32 mb-8 md:mb-16 font-normal"><span>Enterprise cloud data plane.</span>Any environment. Any service.</h1>
+      <div class="hero-text flex flex-wrap md:flex-no-wrap">
+        <div class="hero-card w-full my-2 md:w-1/3 md:m-2 md:ml-0 p-3">
           <h2 class="font-normal text-xl">Build your cloud.</h2>
           <p class="text-sm">Build and secure your data plane on top of your cloud-based infrastructure using the best practices such as automation, IaC, DevOps, CI/CD, holistic monitoring, and DevSecOps, among others.</p>
         </div>
-        <div class="hero-card w-1/3 m-2 p-3">
+        <div class="hero-card w-full my-2 md:w-1/3 md:m-2 p-3">
           <h2 class="font-normal text-xl">Build your Control Plane.</h2>
           <p class="text-sm">To manage and operate end-to-end your data plane and the delivery of your cloud native applications.</p>
         </div>
-        <div class="hero-card w-1/3 m-2 mr-0 p-3">
+        <div class="hero-card w-full my-2 md:w-1/3 md:m-2 md:mr-0 p-3">
           <h2 class="font-normal text-xl">Cloud-based agnostic technology.</h2>
           <p class="text-sm">Free open source tooling, i.e. no vendor-lock-in. Security along the SDLC. Extremely Agile. Automation anywhere and everywhere approach.</p>
         </div>
@@ -131,12 +139,12 @@
   </section>
 
   <section class="home-content pt-5 pb-10">
-    <div class="container mx-auto flex flex-row">
-      <section class="flex-1 m-2 ml-0 mb-5">
+    <div class="container mx-auto md:flex md:flex-row">
+      <section class="flex-1 md:m-2 md:ml-0 mb-5">
           <h2 class="home-title uppercase text-sm mb-2">From Our Blog</h2>
-          <ul class="home-posts flex flew-row -mr-1 -ml-1">
+          <ul class="home-posts md:flex md:flew-row md:-mr-1 md:-ml-1">
             
-              <li class="m-1 p-5 w-1/3 flex flex-col">
+              <li class="mb-2 md:m-1 p-5 md:w-1/3 flex flex-col">
                   
                   <small class="font-bold">Sep 6, 2020</small> 
                   <h3><a href="https://migueluza.github.io/data-plane/blog/another-post-the-forth-really/">Another Post the Forth Really</a></h3> 
@@ -144,7 +152,7 @@
                   <a class="home-readmore font-bold text-xs mt-4" href="https://migueluza.github.io/data-plane/blog/another-post-the-forth-really/">Read More</a>
               </li>
             
-              <li class="m-1 p-5 w-1/3 flex flex-col">
+              <li class="mb-2 md:m-1 p-5 md:w-1/3 flex flex-col">
                   
                   <small class="font-bold">Sep 3, 2020</small> 
                   <h3><a href="https://migueluza.github.io/data-plane/blog/este-es-el-post-numero-tres/">Este es el post número tres</a></h3> 
@@ -152,7 +160,7 @@
                   <a class="home-readmore font-bold text-xs mt-4" href="https://migueluza.github.io/data-plane/blog/este-es-el-post-numero-tres/">Read More</a>
               </li>
             
-              <li class="m-1 p-5 w-1/3 flex flex-col">
+              <li class="mb-2 md:m-1 p-5 md:w-1/3 flex flex-col">
                   
                   <small class="font-bold">Aug 31, 2020</small> 
                   <h3><a href="https://migueluza.github.io/data-plane/blog/post-2/">Post 2</a></h3> 
@@ -163,7 +171,7 @@
           </ul>
       </section>
 
-      <section class="w-1/3 m-2 mr-0 mb-5">
+      <section class="md:w-1/3 md:m-2 md:mr-0 mb-5">
         <h2 class="home-title uppercase text-sm mb-2">Next Webinars</h2>
         <ul class="home-webinars">
           
@@ -193,7 +201,7 @@
   </section>
 
         </section><footer class="py-5">
-  <div class="container mx-auto flex flex-row py-4">
+  <div class="container mx-auto md:flex flex-row py-4">
     <div class="">
       <h2 class="logo mb-3">Data Plane</h2>
       <ul class="flex flex-row">
@@ -203,8 +211,8 @@
       </ul>      
     </div>
     <div class="flex-1 mx-10 mt-3">
-      <nav class="flex-grow">
-  <ul class="flex justify-end uppercase font-bold">
+      <nav class="flex-grow hidden md:block">
+  <ul class="md:flex md:justify-end uppercase font-bold">
     
     
     
@@ -290,6 +298,10 @@
             $('header').headroom({
                 "offset": 100,
             });
+            $('.hamburger').on('click', function(){
+                $(this).toggleClass('is-active');
+                $('nav').toggleClass('is-active');
+            })
         });        
     </script>
 </html>

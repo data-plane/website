@@ -1,5 +1,5 @@
-<nav class="flex-grow">
-  <ul class="flex justify-end uppercase font-bold">
+<nav class="flex-grow hidden md:block">
+  <ul class="md:flex md:justify-end uppercase font-bold">
     {{ $current := . }}
     {{ $type := .Type}}
     {{ range .Site.Menus.main }}

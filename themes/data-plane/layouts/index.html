@@ -2,17 +2,17 @@
   <video class="video-bg" src="{{ .Site.BaseURL }}images/dataplane.mp4" autoplay="true" loop="true" muted="true"></video>
   <section class="hero flex flex-col justify-end">
     <div class="container mx-auto">
-      <h1 class="hero-title mt-32 mb-16 font-normal"><span>Enterprise cloud data plane.</span>Any environment. Any service.</h1>
-      <div class="hero-text flex">
-        <div class="hero-card w-1/3 m-2 ml-0 p-3">
+      <h1 class="hero-title mt-32 mb-8 md:mb-16 font-normal"><span>Enterprise cloud data plane.</span>Any environment. Any service.</h1>
+      <div class="hero-text flex flex-wrap md:flex-no-wrap">
+        <div class="hero-card w-full my-2 md:w-1/3 md:m-2 md:ml-0 p-3">
           <h2 class="font-normal text-xl">Build your cloud.</h2>
           <p class="text-sm">Build and secure your data plane on top of your cloud-based infrastructure using the best practices such as automation, IaC, DevOps, CI/CD, holistic monitoring, and DevSecOps, among others.</p>
         </div>
-        <div class="hero-card w-1/3 m-2 p-3">
+        <div class="hero-card w-full my-2 md:w-1/3 md:m-2 p-3">
           <h2 class="font-normal text-xl">Build your Control Plane.</h2>
           <p class="text-sm">To manage and operate end-to-end your data plane and the delivery of your cloud native applications.</p>
         </div>
-        <div class="hero-card w-1/3 m-2 mr-0 p-3">
+        <div class="hero-card w-full my-2 md:w-1/3 md:m-2 md:mr-0 p-3">
           <h2 class="font-normal text-xl">Cloud-based agnostic technology.</h2>
           <p class="text-sm">Free open source tooling, i.e. no vendor-lock-in. Security along the SDLC. Extremely Agile. Automation anywhere and everywhere approach.</p>
         </div>
@@ -24,12 +24,12 @@
   </section>
 
   <section class="home-content pt-5 pb-10">
-    <div class="container mx-auto flex flex-row">
-      <section class="flex-1 m-2 ml-0 mb-5">
+    <div class="container mx-auto md:flex md:flex-row">
+      <section class="flex-1 md:m-2 md:ml-0 mb-5">
           <h2 class="home-title uppercase text-sm mb-2">From Our Blog</h2>
-          <ul class="home-posts flex flew-row -mr-1 -ml-1">
+          <ul class="home-posts md:flex md:flew-row md:-mr-1 md:-ml-1">
             {{ range where .Paginator.Pages.ByDate.Reverse "Section" "blog" | first 3 }}
-              <li class="m-1 p-5 w-1/3 flex flex-col">
+              <li class="mb-2 md:m-1 p-5 md:w-1/3 flex flex-col">
                   {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
                   <small class="font-bold">{{ .PublishDate.Format $dateFormat }}</small> 
                   <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3> 
@@ -40,7 +40,7 @@
           </ul>
       </section>
 
-      <section class="w-1/3 m-2 mr-0 mb-5">
+      <section class="md:w-1/3 md:m-2 md:mr-0 mb-5">
         <h2 class="home-title uppercase text-sm mb-2">Next Webinars</h2>
         <ul class="home-webinars">
           {{ range where .Site.RegularPages "Section" "webinars-events" | first 3 }}

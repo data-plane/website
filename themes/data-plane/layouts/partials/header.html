@@ -1,6 +1,13 @@
 <header class="fixed w-full top-0 pt-10 pb-5">
   <div class="container mx-auto flex flex-row items-center">
     <h1 class="logo">Data Plane</h1>
-    {{ partial "nav.html" . }}  
+    {{ partial "nav.html" . }} 
+    <div class="hamburger-container flex-grow flex justify-end">
+      <button class="hamburger hamburger--emphatic hidden" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>   
+    </div> 
   </div>
 </header>

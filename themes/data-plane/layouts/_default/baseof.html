@@ -18,6 +18,10 @@
             $('header').headroom({
                 "offset": 100,
             });
+            $('.hamburger').on('click', function(){
+                $(this).toggleClass('is-active');
+                $('nav').toggleClass('is-active');
+            })
         });        
     </script>
 </html>
