@@ -114,7 +114,7 @@
 </header><section id="content" class="flex-1">
 
 
-  <video class="video-bg" src="https://migueluza.github.io/data-plane/images/dataplane.mp4" autoplay="true" loop="true" muted="true"></video>
+  <video id="video-bg" class="video-bg" data-src="https://migueluza.github.io/data-plane/images/dataplane.mp4" autoplay="true" loop="true" muted="true"></video>
   <section class="hero flex flex-col justify-end">
     <div class="container mx-auto">
       <h1 class="hero-title mt-32 mb-8 md:mb-16 font-normal"><span>Enterprise cloud data plane.</span>Any environment. Any service.</h1>
@@ -295,6 +295,7 @@
     <script src="https://migueluza.github.io/data-plane/js/jQuery.headroom.min.js"></script>
     <script>
         $(document).ready(function(){
+            checkVideo();
             $('header').headroom({
                 "offset": 100,
             });
@@ -302,6 +303,20 @@
                 $(this).toggleClass('is-active');
                 $('nav').toggleClass('is-active');
             })
-        });        
+        });  
+        function isMobile(){
+            if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) {
+                return true
+            } else {
+                return false
+            }
+        }  
+        function checkVideo () {
+            const videoTag = document.getElementById('video-bg')
+            if (videoTag.offsetWidth > 0 && !this.isMobile()) {
+                videoTag.src = videoTag.getAttribute('data-src')
+            }
+            videoTag.load()
+        }                    
     </script>
 </html>

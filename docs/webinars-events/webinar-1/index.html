@@ -250,6 +250,7 @@
     <script src="https://migueluza.github.io/data-plane/js/jQuery.headroom.min.js"></script>
     <script>
         $(document).ready(function(){
+            checkVideo();
             $('header').headroom({
                 "offset": 100,
             });
@@ -257,6 +258,20 @@
                 $(this).toggleClass('is-active');
                 $('nav').toggleClass('is-active');
             })
-        });        
+        });  
+        function isMobile(){
+            if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) {
+                return true
+            } else {
+                return false
+            }
+        }  
+        function checkVideo () {
+            const videoTag = document.getElementById('video-bg')
+            if (videoTag.offsetWidth > 0 && !this.isMobile()) {
+                videoTag.src = videoTag.getAttribute('data-src')
+            }
+            videoTag.load()
+        }                    
     </script>
 </html>
