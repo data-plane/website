@@ -167,7 +167,8 @@ header.headroom--not-top .logo{
 }
 .hamburger{
   outline:none !important;
-  padding:0
+  padding:0;
+  overflow:visible
 }
 @media (min-width:768px){
   .hamburger-container{
