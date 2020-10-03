@@ -187,8 +187,8 @@ header.headroom--not-top .logo{
     width:250px;
     height:50px
   }
-  header nav.is-active{
-    display: block;
+  header nav{
+    display: block !important;
     background: #662d91;
     position:absolute;
     z-index:-1;
@@ -196,7 +196,12 @@ header.headroom--not-top .logo{
     left:0;
     width:100vw;
     height:100vh;
-    padding:8rem 1rem 1rem 1rem
+    padding:8rem 1rem 1rem 1rem;
+    transform:translateY(-100vh);
+    transition: all .2s;
+  }
+  header nav.is-active{
+    transform: translateY(0);
   }
   header nav ul li{
     margin-bottom:1rem;
