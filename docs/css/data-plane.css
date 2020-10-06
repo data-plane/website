@@ -157,6 +157,7 @@ header.headroom--not-top{
   backdrop-filter: blur(4px);
   padding-top:1rem;
   padding-bottom:.5rem;
+  z-index:100;
 }
 header .logo{
 }
@@ -348,6 +349,7 @@ header.headroom--not-top .logo{
   color:#662d91
 }
 .home-posts li{
+  position:relative;
   background:white;
   box-shadow: 0 0 2px rgba(0,0,0,.3);
 }
@@ -456,6 +458,7 @@ footer nav .sub-menu li{
   font-family: 'Bariol Light';
 }
 .page-content{
+  position:relative;
   padding:2rem;
   margin-bottom:2rem;
   background:rgba(255,255,255,.8);
@@ -519,4 +522,19 @@ footer nav .sub-menu li{
 .post-content h6,
 .webinars-events-content h6{
   font-size:1.1rem
+}
+/*SHARETHIS*/
+.sharethis-inline-share-buttons{
+  position:absolute;
+  top:2rem;
+  right:2rem
+}
+.st-btn{
+  width:32px;
+  height:32px
+}
+.home .sharethis-inline-share-buttons{
+  top:unset;
+  bottom:.7rem;
+  right:.6rem
 }

@@ -253,11 +253,22 @@
             }
         }  
         function checkVideo () {
-            const videoTag = document.getElementById('video-bg')
-            if (videoTag.offsetWidth > 0 && !this.isMobile()) {
-                videoTag.src = videoTag.getAttribute('data-src')
+            if(document.getElementById('video-bg')){
+                const videoTag = document.getElementById('video-bg');
+                if (videoTag.offsetWidth > 0 && !this.isMobile()) {
+                    videoTag.src = videoTag.getAttribute('data-src');
+                }
+                videoTag.load();
             }
-            videoTag.load()
         }                    
+    </script>
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f7b3e1858d3aa0012f57584&product=sop' async='async'></script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156433649-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-156433649-2');
     </script>
 </html>

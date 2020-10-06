@@ -35,6 +35,9 @@
                   <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3> 
                   <div class="text-sm flex-1">{{ .Summary }}</div>
                   <a class="home-readmore font-bold text-xs mt-4" href="{{ .Permalink }}">Read More</a>
+                  <!-- ShareThis BEGIN -->
+                  <div class="sharethis-inline-share-buttons" data-url="{{ .Permalink }}" data-title="{{ .Title }}"></div>
+                  <!-- ShareThis END -->
               </li>
             {{ end }}
           </ul>
